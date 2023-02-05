@@ -6,13 +6,11 @@ from typing import Any, Dict, Iterable, List, Tuple, Union
 
 log = logging.getLogger()
 
-data_base_name = 'candles.db'
-
-db_user = os.environ.get('DB_USER', 'postgres')
-db_pwd = os.environ.get('DB_PWD', 'kline')
+db_user = os.environ.get('POSTGRES_USER', 'postgres')
+db_pwd = os.environ.get('POSTGRES_PASSWORD', 'kline')
 db_host = os.environ.get('DB_HOST', 'localhost')
 db_port = os.environ.get('DB_PORT', '5432')
-db_name = os.environ.get('DB_NAME', 'kline')
+db_name = os.environ.get('POSTGRES_DB', 'kline')
 
 db_conn_string = f'postgresql://{db_user}:{db_pwd}@{db_host}:{db_port}/{db_name}'
 conn = psycopg2.connect(db_conn_string)

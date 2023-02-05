@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  selector:
+   matchLabels:
+    app: watcher
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+        - name: watcher
+          image: binance-watcher
+          imagePullPolicy: "Always"
+          envFrom:
+            - configMapRef:
+                name: postgres-config
+            - configMapRef:
+                name: watcher-config

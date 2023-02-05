@@ -1,0 +1,9 @@
+apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: watcher-config
+    labels:
+      app: watcher
+  data:
+    BINANCE_API_KEY: your_api_key
+    BINANCE_API_SECRET: your_api_secret
