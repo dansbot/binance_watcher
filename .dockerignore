@@ -2,3 +2,4 @@ venv/
 .dockignore
 Dockerfile
 secrets*
+k8s/
