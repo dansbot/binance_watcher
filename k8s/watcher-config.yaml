@@ -5,5 +5,5 @@ apiVersion: v1
     labels:
       app: watcher
   data:
-    BINANCE_API_KEY: l3I0UJgQGDDWLpXS9pLmovaUTIQGwQnaplD8Lvdb236LduXeLta3MhA3APu0GhU2
-    BINANCE_API_SECRET: B82btzvLXZMt5sx8EdAaUSVZchFRwBxJZhmkFV3XauTvVpZIBfTJwgpVmuUsYjL6
+    BINANCE_API_KEY: your_api_key
+    BINANCE_API_SECRET: your_api_secret
