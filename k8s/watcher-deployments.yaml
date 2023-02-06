@@ -1,0 +1,9476 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETHUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XRPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BCHUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LTCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - USDTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETHUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XRPUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BCHUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LTCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BNBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BNBUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETHBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XRPBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BNBBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LTCBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BCHBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ADAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BATUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XLMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZRXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ADAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BATUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XLMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZRXUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LINKUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RVNUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DASHUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZECUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALGOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - IOTAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BUSDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DOGEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - WAVESUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ATOMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ATOMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NEOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NEOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VETUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - QTUMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - QTUMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NANOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ICXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ENJUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ONTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ONTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZILUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZILBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VETUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BNBBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XRPBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETHBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALGOBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XTZUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XTZBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - HBARUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - HBARBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OMGUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OMGBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MATICUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MATICBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XTZBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ADABTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - REPBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - REPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - EOSBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - EOSUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DOGEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KNCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KNCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VTHOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VTHOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - USDCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - COMPUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - COMPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MANAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - HNTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - HNTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MKRUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MKRUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DAIUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ONEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ONEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BANDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BANDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - STORJUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - STORJUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BUSDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - UNIUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - UNIUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SOLUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SOLUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LINKBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VETBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - UNIBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - EGLDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - EGLDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PAXGUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PAXGUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OXTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OXTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZENUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZENUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCUSDC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ONEBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FILUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FILUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AAVEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AAVEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GRTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GRTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SUSHIUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ANKRUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AMPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SHIBUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SHIBBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CRVUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CRVUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AXSUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AXSUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SOLBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AVAXUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AVAXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CTSIUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CTSIUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DOTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DOTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - YFIUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - YFIUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - 1INCHUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - 1INCHUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FTMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FTMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - USDCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETHUSDC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - USDCBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MATICUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MANAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MANABUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALGOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ADABUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SOLBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LINKUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - EOSUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ZECUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ENJUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NEARUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NEARBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NEARUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OMGUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SUSHIUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LRCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LRCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LRCBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KSHIBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LPTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LPTBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LPTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - POLYUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - POLYBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - POLYUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - POLYBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MATICBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DOTBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NMRUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - NMRUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SLPUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SLPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ANTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ANTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - XNOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CHZUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CHZUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OGNUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OGNUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GALAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GALAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TLMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TLMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SNXUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SNXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AUDIOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AUDIOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ENSUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MANABTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ATOMBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AVAXBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - WBTCBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - REQUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - REQUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - APEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - APEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FLUXUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FLUXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TRXBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TRXBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TRXUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TRXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - COTIUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - COTIUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VOXELUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VOXELUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RLCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RLCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - USTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - USTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BICOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BICOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - API3USDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - API3USD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ENSUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCUST
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BNTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BNTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - IMXUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - IMXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SPELLUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SPELLUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - JASMYUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - JASMYUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FLOWUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FLOWUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GTCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GTCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - THETAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - THETAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TFUELUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TFUELUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OCEANUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OCEANUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LAZIOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LAZIOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SANTOSUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SANTOSUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALPINEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALPINEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PORTOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PORTOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RENUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RENUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CELRUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CELRUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SKLUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SKLUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VITEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - VITEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - WAXPUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - WAXPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LTOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LTOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FETUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FETUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BONDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BONDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LOKAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LOKAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ICPUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ICPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OPUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - OPUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ROSEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ROSEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CELOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CELOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KDAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KDAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KSMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KSMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ACHUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ACHUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DARUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DARUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RNDRUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RNDRUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SYSUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SYSUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RADUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RADUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ILVUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ILVUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LDOUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LDOUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RAREUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - RAREUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LSKUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LSKUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DGBUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DGBUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - REEFUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - REEFUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SRMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SRMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALICEUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ALICEUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FORTHUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - FORTHUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ASTRUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ASTRUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTRSTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTRSTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GALUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GALUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SANDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SANDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BALUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BALUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - POLYXUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GLMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - GLMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CLVUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - CLVUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TUSDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - TUSDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - QNTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - QNTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - STGUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - STGUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AXLUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - AXLUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KAVAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - KAVAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - APTUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - APTUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MASKUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MASKUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BOSONUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BOSONUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PONDUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PONDUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - SOLUSDC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ADAUSDC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MXCUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - MXCUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - JAMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - JAMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PROMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - PROMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DIAUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DIAUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCDAI
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ETHDAI
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ADAETH
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - DOGEBTC
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LOOMUSDT
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - LOOMUSD
+        - trade
+        envFrom:
+        - configMapRef:
+            name: postgres-config
+        - configMapRef:
+            name: watcher-config
+        image: binance-watcher
+        imagePullPolicy: Always
+        name: watcher

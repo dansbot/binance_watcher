@@ -15,6 +15,9 @@ spec:
       containers:
         - name: watcher
           image: binance-watcher
+          args:
+            - symbol_pair
+            - socket
           imagePullPolicy: "Always"
           envFrom:
             - configMapRef:
