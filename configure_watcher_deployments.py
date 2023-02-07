@@ -10,7 +10,7 @@ client = Client(
     tld='us',
 )
 
-with open('k8s/watcher-deployment-template.yaml') as fp:
+with open('k8s/templates/watcher-deployment-template.yaml') as fp:
     deployment_template = yaml.safe_load(fp)
 
 s = ""
@@ -20,6 +20,7 @@ for symbol in exchange_info['symbols']:
     dep['spec']['template']['spec']['containers'][0]['args'] = [symbol['symbol'], 'trade']
     s += yaml.dump(dep)
     s += "---\n"
+    break
 
 with open('k8s/watcher-deployments.yaml', 'w') as fp:
     fp.write(s[:-len("---\n")])

@@ -15,12 +15,13 @@ spec:
       containers:
         - name: watcher
           image: binance-watcher
+          command:
+            - python
+            - run_socket.py
           args:
             - symbol_pair
             - socket
-          imagePullPolicy: "Always"
+          imagePullPolicy: "Never"
           envFrom:
-            - configMapRef:
-                name: postgres-config
             - configMapRef:
                 name: watcher-config
