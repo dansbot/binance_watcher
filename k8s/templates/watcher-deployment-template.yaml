@@ -25,3 +25,5 @@ spec:
           envFrom:
             - configMapRef:
                 name: watcher-config
+            - configMapRef:
+                name: postgres-config

@@ -3,3 +3,4 @@ venv/
 Dockerfile
 secrets*
 k8s/
+sw_*.py
