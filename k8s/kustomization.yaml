@@ -1,3 +1,4 @@
 resources:
   - watcher-config.yaml
   - watcher-deployments.yaml
+  - postgres.yaml
