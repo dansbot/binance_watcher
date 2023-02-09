@@ -4,3 +4,5 @@ Dockerfile
 secrets*
 k8s/
 sw_*.py
+deploy.py
+k8s_commands.py
