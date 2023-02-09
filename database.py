@@ -13,7 +13,7 @@ db_port = os.environ.get('POSTGRES_PORT', '5432')
 db_name = os.environ.get('POSTGRES_DB', 'postgresdb')
 
 db_conn_string = f'postgresql://{db_user}:{db_pwd}@{db_host}:{db_port}/{db_name}'
-print(f"Db connection string: {db_conn_string}")
+log.debug(f"Db connection string: {db_conn_string}")
 conn = psycopg2.connect(db_conn_string)
 cur = conn.cursor()
 log.debug(f"Db connection set: {db_conn_string}")
