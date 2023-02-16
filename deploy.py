@@ -1,23 +1,23 @@
 import sys
 import time
-from typing import Set
+from typing import List, Set
 import yaml
-
-from pprint import pprint
 
 import k8s_commands
 
-
-def get_yaml_files():
-    yaml_files = [
-        "k8s/postgres.yaml",
-        "k8s/watcher-config.yaml",
-        "k8s/watcher-deployments.yaml",
-    ]
-    return yaml_files
+# a list of yaml files to be applied to the cluster.
+YAML_FILES = [
+    "k8s/postgres.yaml",
+    "k8s/watcher-config.yaml",
+    "k8s/watcher-deployments.yaml",
+]
 
 
 def wait_until_running(deployment_name: str, timeout: int = 60):
+    """
+    Wait for the specified deployment to be in "Running" status, or raise an error if the
+    waiting period exceeds the specified timeout.
+    """
     start_time = time.time()
     while time.time() - start_time <= timeout:
         pods = k8s_commands.get("pods", "describe", do_not_write=True)
@@ -28,8 +28,11 @@ def wait_until_running(deployment_name: str, timeout: int = 60):
 
 
 def get_kinds() -> Set[str]:
+    """
+    Extract the kind from each of the yaml files and return a set of unique kinds.
+    """
     kinds = set()
-    for fn in get_yaml_files():
+    for fn in YAML_FILES:
         with open(fn) as fp:
             ymls = yaml.safe_load_all(fp)
             for yml in list(ymls):
@@ -39,21 +42,31 @@ def get_kinds() -> Set[str]:
 
 
 def clean_start(new_volume: bool):
+    """
+    Deletes existing resources and starts new resources, optionally skipping deletion of PersistentVolumes.
+    """
     for kind in get_kinds():
         if new_volume and 'PersistentVolume' in kind:
-            continue
-        k8s_commands.delete(kind)
+            k8s_commands.delete(kind, force=True)
+        else:
+            k8s_commands.delete(kind)
     start()
 
 
 def start():
-    for fn in get_yaml_files():
+    """
+    Applies the yaml files to the cluster.
+    """
+    for fn in YAML_FILES:
         k8s_commands.run_process(["kubectl", "apply", "-f", fn])
         if "postgres" in fn:
             wait_until_running("postgres")
 
 
 if __name__ == "__main__":
+    """
+    Parse command line arguments and perform either a clean start or a start.
+    """
     if "--clean" in sys.argv or "-c" in sys.argv:
         clean_start("--new_volume" in sys.argv or "-nv" in sys.argv)
     else:

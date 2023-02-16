@@ -1,7 +1,8 @@
+import os
 import subprocess
 from typing import List, Tuple, Union
 
-KUBE_CONFIG = "%USERPROFILE%/.kube/config"
+KUBE_CONFIG = os.path.join(os.environ.get('USERPROFILE'), ".kube", "config")
 
 
 def set_config(file: str):
@@ -10,21 +11,28 @@ def set_config(file: str):
 
 
 def run_process(cmd: List[str], **kwargs) -> Tuple[str, str]:
-    # cmd.append(f"--kubeconfig={KUBE_CONFIG}")
+    cmd.append(f"--kubeconfig={KUBE_CONFIG}")
     if not kwargs.get("do_not_write"):
         if len(cmd) > 9:
-            print(f"running command: {' '.join(cmd[:6] + ['...'] + cmd[-1:])}")
+            print(f"running command: {' '.join(cmd[:6] + ['...'] + cmd[-2:-1])}")
         else:
-            print(f"running command: {' '.join(cmd)}")
+            print(f"running command: {' '.join(cmd[:-1])}")
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err = p.communicate()
     out, err = out.decode('utf-8'), err.decode('utf-8')
-    if not kwargs.get("allow_errors"):
+    if kwargs.get("allowed_errors") and err:
+        okay = False
+        for ok_err in kwargs.get("allowed_errors"):
+            if ok_err == err.strip():
+                okay = True
+        assert okay, err
+    else:
         assert not err, err
     return out, err
 
 
 def get_contexts(**kwargs):
+    # TODO: finish this code
     cmd = ['kubectl', 'config', 'get-contexts']
     out, err = run_process(cmd, **kwargs)
     print(out)
@@ -39,7 +47,13 @@ def set_context(context: str, **kwargs):
 
 def get(kind: str, filt: str, **kwargs) -> List[Union[str, dict]]:
     cmd = ["kubectl", "get", kind]
-    out, err = run_process(cmd, **kwargs)
+    out, err = run_process(
+        cmd,
+        **{**kwargs, **{
+            "allowed_errors": [
+                "No resources found in default namespace.",
+                "No resources found"
+            ]}})
     ret = []
     lines = out.split('\n')
     cols = [s.strip() for s in lines[0].split()]
@@ -58,10 +72,14 @@ def get(kind: str, filt: str, **kwargs) -> List[Union[str, dict]]:
 
 
 def delete(kind: str, delete_list: List[str] = None, **kwargs):
+    force = kwargs.get('force', False)
     if delete_list is None:
         delete_list = get(kind, 'name', **kwargs)
-    cmd = ["kubectl", "delete", kind] + delete_list
-    run_process(cmd, **kwargs)
+    if delete_list:
+        cmd = ["kubectl", "delete", kind] + delete_list
+        if force:
+            cmd.extend(["--grace-period=0"])
+        run_process(cmd, **kwargs)
 
 
 def get_kind_by_status(kind: str, **kwargs) -> dict:
@@ -79,5 +97,4 @@ def deployment_from_pod_name(pod_name: str) -> str:
 
 
 if __name__ == "__main__":
-    # run_process(["kubectl", "apply", "-f", "k8s/postgres.yaml"])
     delete("deployments")
