@@ -20,6 +20,7 @@ with open('k8s/templates/watcher-deployment-template.yaml') as fp:
 
 # Get the list of asset pairs from the exchange info
 pairs = []
+print("Retrieving list of symbols from Binance-US")
 exchange_info = client.get_exchange_info()
 for asset in exchange_info['symbols']:
     symbol = asset['symbol']
@@ -36,6 +37,7 @@ for asset in exchange_info['symbols']:
 
 # Sort the pairs by the number of trades if the rank flag is present
 if rank_by_num_trades:
+    print('Ranking by number of trades.')
     pairs.sort(reverse=True)
 
 # Get the limit from the arguments, or use the full length of the list if not specified

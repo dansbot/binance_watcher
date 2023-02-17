@@ -45,9 +45,10 @@ def clean_start(new_volume: bool):
     """
     Deletes existing resources and starts new resources, optionally skipping deletion of PersistentVolumes.
     """
-    for kind in get_kinds():
-        if new_volume and 'PersistentVolume' in kind:
-            k8s_commands.delete(kind, force=True)
+    for kind in sorted(list(get_kinds())):
+        if 'PersistentVolume' in kind:
+            if new_volume:
+                k8s_commands.delete(kind, force=True)
         else:
             k8s_commands.delete(kind)
     start()

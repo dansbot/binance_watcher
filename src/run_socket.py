@@ -173,6 +173,6 @@ if __name__ == "__main__":
         default="INFO",
     )
     args = parser.parse_args()
-    log.setLevel(logging._nameToLevel[args.log_level])
+    log.setLevel(args.log_level)
 
     start_loop(args.symbol, args.socket)

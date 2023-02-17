@@ -631,7 +631,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: manausd
+  name: ethusdt
 spec:
   replicas: 1
   selector:
@@ -644,7 +644,7 @@ spec:
     spec:
       containers:
       - args:
-        - MANAUSD
+        - ETHUSDT
         - trade
         command:
         - python
@@ -661,7 +661,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ethusdt
+  name: manausd
 spec:
   replicas: 1
   selector:
@@ -674,7 +674,7 @@ spec:
     spec:
       containers:
       - args:
-        - ETHUSDT
+        - MANAUSD
         - trade
         command:
         - python
@@ -931,7 +931,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: algousd4
+  name: solusdt
 spec:
   replicas: 1
   selector:
@@ -944,7 +944,7 @@ spec:
     spec:
       containers:
       - args:
-        - ALGOUSD4
+        - SOLUSDT
         - trade
         command:
         - python
@@ -961,7 +961,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: solusdt
+  name: algousd4
 spec:
   replicas: 1
   selector:
@@ -974,7 +974,7 @@ spec:
     spec:
       containers:
       - args:
-        - SOLUSDT
+        - ALGOUSD4
         - trade
         command:
         - python
@@ -1681,7 +1681,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vthousdt
+  name: avaxusd
 spec:
   replicas: 1
   selector:
@@ -1694,7 +1694,7 @@ spec:
     spec:
       containers:
       - args:
-        - VTHOUSDT
+        - AVAXUSD
         - trade
         command:
         - python
@@ -1711,7 +1711,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: avaxusd
+  name: vthousdt
 spec:
   replicas: 1
   selector:
@@ -1724,7 +1724,7 @@ spec:
     spec:
       containers:
       - args:
-        - AVAXUSD
+        - VTHOUSDT
         - trade
         command:
         - python
@@ -1831,6 +1831,36 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: apeusd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - APEUSD
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: rvnusd
 spec:
   replicas: 1
@@ -1875,36 +1905,6 @@ spec:
       containers:
       - args:
         - RVNUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: apeusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - APEUSD
         - trade
         command:
         - python
@@ -2191,6 +2191,36 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: btcbusd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - BTCBUSD
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: ftmusd4
 spec:
   replicas: 1
@@ -2281,36 +2311,6 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: btcbusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BTCBUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: nanousd
 spec:
   replicas: 1
@@ -2371,7 +2371,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: oxtusd4
+  name: bchusd
 spec:
   replicas: 1
   selector:
@@ -2384,7 +2384,7 @@ spec:
     spec:
       containers:
       - args:
-        - OXTUSD4
+        - BCHUSD
         - trade
         command:
         - python
@@ -2401,7 +2401,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bchusd
+  name: oxtusd4
 spec:
   replicas: 1
   selector:
@@ -2414,7 +2414,7 @@ spec:
     spec:
       containers:
       - args:
-        - BCHUSD
+        - OXTUSD4
         - trade
         command:
         - python
