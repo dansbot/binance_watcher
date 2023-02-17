@@ -1,12 +1,11 @@
-# Binance Trade Websocket Watchers (w/ Kubernetes)
+# Binance-US Websocket Watchers (w/ Kubernetes)
 
 This repo is used to record trades or k-lines from Binance US websockets to a postgres database.
 
 This code is designed to be executed on a kubernetes cluster. For details on how to use kubernetes, [go here](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 
 For development this code was written for Kubernetes being run with Docker Desktop. The yaml files in the [k8s](https://github.com/dansbot/binance_watcher/tree/main/k8s)
-folder are written with this in mind. Details on how to change these are provided in [k8s/README.md](https://github.com/dansbot/binance_watcher/tree/main/k8s) and [srd/README.md](https://github.com/dansbot/binance_watcher/tree/main/src) files.
-
+folder are written with this in mind.
 
 ## Run with Kubernetes on your local machine
 1. Install Docker Desktop. Instructions found [here](https://docs.docker.com/desktop/install/mac-install/)
@@ -28,8 +27,6 @@ docker build -t binance-watcher .
 ```
 7. Run the [deployment.py](##deploy.py) script from the root of the repo.
    
-This will create a postgres service that can be accessed 
-
 
 ## Updating watcher-deployment.yaml
 k8s/watcher-deployments.yaml contains deployments for the top 100 most traded pairs as of Feb. 17, 2023. These deployments can 
@@ -41,7 +38,7 @@ The script uses the Binance API to retrieve the list of assets, filters the ones
 
 Install the required dependencies:
    - `pyyaml` library: can be installed using `pip install PyYAML==6.0`
-   - `python-binance` library: can be installed using `pip install python-binance==1.0.16`
+   - `python-binance` library: can be installed using `pip install python-binance==1..16`
 
 Run the **configure_watcher_deployments.py** script from the command line:
 ```commandline
