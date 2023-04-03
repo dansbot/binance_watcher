@@ -1,32 +1,3 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: postgres
-spec:
-  selector:
-   matchLabels:
-    app: postgres
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: postgres
-    spec:
-      containers:
-        - name: postgres
-          image: postgres:latest
-          imagePullPolicy: "Always"
-          envFrom:
-            - configMapRef:
-                name: postgres-config
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: postgredb
-      volumes:
-        - name: postgredb
-          persistentVolumeClaim:
-            claimName: postgres-pv-claim
----
 kind: PersistentVolume
 apiVersion: v1
 metadata:
@@ -68,7 +39,36 @@ data:
   POSTGRES_PASSWORD: root
   POSTGRES_DB: postgresdb
   POSTGRES_HOST: postgres
-  POSTGRES_PORT: '5432'
+  POSTGRES_PORT: "5432"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:latest
+          imagePullPolicy: "Always"
+          envFrom:
+            - configMapRef:
+                name: postgres-config
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgredb
+      volumes:
+        - name: postgredb
+          persistentVolumeClaim:
+            claimName: postgres-pv-claim
 ---
 apiVersion: v1
 kind: Service
@@ -77,10 +77,11 @@ metadata:
   labels:
     app: postgres
 spec:
-   ports:
+  type: NodePort
+  selector:
+    app: postgres
+  ports:
     - name: postgres
       port: 5432
-      nodePort: 30432
-   type: NodePort
-   selector:
-    app: postgres
+      targetPort: 5432
+      nodePort: 30000

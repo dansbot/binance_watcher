@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: btcusd
+  name: wavesusd4
 spec:
   replicas: 1
   selector:
@@ -14,2527 +14,7 @@ spec:
     spec:
       containers:
       - args:
-        - BTCUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: btcusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BTCUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ethusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ETHUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ethusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ETHUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: adausd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ADAUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: adausd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ADAUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: dogeusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - DOGEUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: dogeusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - DOGEUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: solusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - SOLUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: solusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - SOLUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: maticusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - MATICUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: maticusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - MATICUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: btcusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BTCUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: bnbusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BNBUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: bnbusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BNBUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: usdtusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - USDTUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: usdtusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - USDTUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: oneusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ONEUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: oneusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ONEUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: vetusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - VETUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: vetusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - VETUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ethusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ETHUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: manausd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - MANAUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: manausd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - MANAUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: shibusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - SHIBUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: dogeusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - DOGEUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: atomusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ATOMUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: atomusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ATOMUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: linkusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - LINKUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: linkusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - LINKUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: algousd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ALGOUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: solusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - SOLUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: algousd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ALGOUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: adausdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ADAUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hbarusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - HBARUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hbarusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - HBARUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ltcusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - LTCUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ltcusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - LTCUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: enjusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ENJUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: enjusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ENJUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: xlmusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - XLMUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: xlmusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - XLMUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: vetusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - VETUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hntusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - HNTUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: oneusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ONEUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hntusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - HNTUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: vthousd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - VTHOUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: vthousd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - VTHOUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: bnbusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BNBUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: atomusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ATOMUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: xtzusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - XTZUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: xtzusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - XTZUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: zilusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ZILUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: zilusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ZILUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: storjusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - STORJUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: storjusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - STORJUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: avaxusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - AVAXUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: vthousdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - VTHOUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: avaxusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - AVAXUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: egldusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - EGLDUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: egldusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - EGLDUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: apeusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - APEUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: rvnusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - RVNUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: rvnusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - RVNUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: apeusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - APEUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ampusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - AMPUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: maticbusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - MATICBUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ltcusdt
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - LTCUSDT
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: omgusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - OMGUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: omgusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - OMGUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: iotausd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - IOTAUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: iotausd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - IOTAUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ftmusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - FTMUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: btcbusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BTCBUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ftmusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - FTMUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: etcusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ETCUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: etcusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - ETCUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nanousd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - NANOUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: oxtusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - OXTUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: bchusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BCHUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: oxtusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - OXTUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: bchusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BCHUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: uniusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - UNIUSD
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: uniusd4
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - UNIUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: sushiusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - SUSHIUSD
+        - wavesusd4
         - trade
         command:
         - python
@@ -2564,7 +44,7 @@ spec:
     spec:
       containers:
       - args:
-        - SUSHIUSD4
+        - sushiusd4
         - trade
         command:
         - python
@@ -2581,7 +61,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wavesusd
+  name: storjusd4
 spec:
   replicas: 1
   selector:
@@ -2594,7 +74,7 @@ spec:
     spec:
       containers:
       - args:
-        - WAVESUSD
+        - storjusd4
         - trade
         command:
         - python
@@ -2611,7 +91,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wavesusd4
+  name: maticusd4
 spec:
   replicas: 1
   selector:
@@ -2624,7 +104,7 @@ spec:
     spec:
       containers:
       - args:
-        - WAVESUSD4
+        - maticusd4
         - trade
         command:
         - python
@@ -2641,7 +121,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: compusd
+  name: vthousd4
 spec:
   replicas: 1
   selector:
@@ -2654,7 +134,187 @@ spec:
     spec:
       containers:
       - args:
-        - COMPUSD
+        - vthousd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usdtusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - usdtusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: manausd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - manausd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linkusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - linkusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iotausd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - iotausd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hbarusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - hbarusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: egldusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - egldusd4
         - trade
         command:
         - python
@@ -2684,67 +344,7 @@ spec:
     spec:
       containers:
       - args:
-        - COMPUSD4
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: btcusdc
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BTCUSDC
-        - trade
-        command:
-        - python
-        - run_socket.py
-        envFrom:
-        - configMapRef:
-            name: watcher-config
-        - configMapRef:
-            name: postgres-config
-        image: binance-watcher
-        imagePullPolicy: Never
-        name: watcher
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: busdusd
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: watcher
-  template:
-    metadata:
-      labels:
-        app: watcher
-    spec:
-      containers:
-      - args:
-        - BUSDUSD
+        - compusd4
         - trade
         command:
         - python
@@ -2774,7 +374,7 @@ spec:
     spec:
       containers:
       - args:
-        - BUSDUSD4
+        - busdusd4
         - trade
         command:
         - python
@@ -2791,7 +391,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shibbusd
+  name: avaxusd4
 spec:
   replicas: 1
   selector:
@@ -2804,7 +404,7 @@ spec:
     spec:
       containers:
       - args:
-        - SHIBBUSD
+        - avaxusd4
         - trade
         command:
         - python
@@ -2821,7 +421,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eosusd
+  name: atomusd4
 spec:
   replicas: 1
   selector:
@@ -2834,7 +434,187 @@ spec:
     spec:
       containers:
       - args:
-        - EOSUSD
+        - atomusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: algousd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - algousd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zilusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - zilusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xtzusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - xtzusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ftmusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ftmusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ethusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ethusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: etcusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - etcusd4
         - trade
         command:
         - python
@@ -2864,7 +644,7 @@ spec:
     spec:
       containers:
       - args:
-        - EOSUSD4
+        - eosusd4
         - trade
         command:
         - python
@@ -2881,7 +661,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xlmusdt
+  name: enjusd4
 spec:
   replicas: 1
   selector:
@@ -2894,7 +674,7 @@ spec:
     spec:
       containers:
       - args:
-        - XLMUSDT
+        - enjusd4
         - trade
         command:
         - python
@@ -2911,7 +691,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kncusd
+  name: btcusd4
 spec:
   replicas: 1
   selector:
@@ -2924,7 +704,7 @@ spec:
     spec:
       containers:
       - args:
-        - KNCUSD
+        - btcusd4
         - trade
         command:
         - python
@@ -2941,7 +721,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kncusd4
+  name: bnbusd4
 spec:
   replicas: 1
   selector:
@@ -2954,7 +734,7 @@ spec:
     spec:
       containers:
       - args:
-        - KNCUSD4
+        - bnbusd4
         - trade
         command:
         - python
@@ -2971,7 +751,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: batusd
+  name: bchusd4
 spec:
   replicas: 1
   selector:
@@ -2984,7 +764,97 @@ spec:
     spec:
       containers:
       - args:
-        - BATUSD
+        - bchusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apeusd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - apeusd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adausd4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - adausd4
+        - trade
+        command:
+        - python
+        - run_socket.py
+        envFrom:
+        - configMapRef:
+            name: watcher-config
+        - configMapRef:
+            name: postgres-config
+        image: binance-watcher
+        imagePullPolicy: Never
+        name: watcher
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ampusd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: watcher
+  template:
+    metadata:
+      labels:
+        app: watcher
+    spec:
+      containers:
+      - args:
+        - ampusd
         - trade
         command:
         - python

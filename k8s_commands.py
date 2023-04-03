@@ -1,8 +1,8 @@
 import os
 import subprocess
-from typing import List, Tuple, Union
+from typing import Any, List, Optional, Tuple, Union
 
-KUBE_CONFIG = os.path.join(os.environ.get('USERPROFILE'), ".kube", "config")
+KUBE_CONFIG = os.path.join(os.environ.get("USERPROFILE"), ".kube", "config")
 
 
 def set_config(file: str):
@@ -10,7 +10,7 @@ def set_config(file: str):
     KUBE_CONFIG = file
 
 
-def run_process(cmd: List[str], **kwargs) -> Tuple[str, str]:
+def run_process(cmd: List[str], **kwargs: Any) -> Tuple[str, str]:
     cmd.append(f"--kubeconfig={KUBE_CONFIG}")
     if not kwargs.get("do_not_write"):
         if len(cmd) > 9:
@@ -19,7 +19,7 @@ def run_process(cmd: List[str], **kwargs) -> Tuple[str, str]:
             print(f"running command: {' '.join(cmd[:-1])}")
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     out, err = p.communicate()
-    out, err = out.decode('utf-8'), err.decode('utf-8')
+    out, err = out.decode("utf-8"), err.decode("utf-8")
     if kwargs.get("allowed_errors") and err:
         okay = False
         for ok_err in kwargs.get("allowed_errors"):
@@ -31,38 +31,43 @@ def run_process(cmd: List[str], **kwargs) -> Tuple[str, str]:
     return out, err
 
 
-def get_contexts(**kwargs):
+def get_contexts(**kwargs: Any):
     # TODO: finish this code
-    cmd = ['kubectl', 'config', 'get-contexts']
+    cmd = ["kubectl", "config", "get-contexts"]
     out, err = run_process(cmd, **kwargs)
     print(out)
     # for o in out.split('\n'):
     #     print(o)
 
 
-def set_context(context: str, **kwargs):
-    cmd = ['kubectl', 'config', 'use-context', context]
+def set_context(context: str, **kwargs: Any):
+    cmd = ["kubectl", "config", "use-context", context]
     run_process(cmd, **kwargs)
 
 
-def get(kind: str, filt: str, **kwargs) -> List[Union[str, dict]]:
+def get(kind: str, filt: str, **kwargs: Any) -> List[Union[str, dict]]:
     cmd = ["kubectl", "get", kind]
     out, err = run_process(
         cmd,
-        **{**kwargs, **{
-            "allowed_errors": [
-                "No resources found in default namespace.",
-                "No resources found"
-            ]}})
+        **{
+            **kwargs,
+            **{
+                "allowed_errors": [
+                    "No resources found in default namespace.",
+                    "No resources found",
+                ]
+            },
+        },
+    )
     ret = []
-    lines = out.split('\n')
+    lines = out.split("\n")
     cols = [s.strip() for s in lines[0].split()]
     for s in lines[1:]:
         if not s.strip():
             continue
-        if filt == 'name':
+        if filt == "name":
             s = s.split()[0].strip()
-        elif filt == 'describe':
+        elif filt == "describe":
             info = {}
             for k, v in zip(cols, [x.strip() for x in s.split()]):
                 info[k] = v
@@ -71,10 +76,10 @@ def get(kind: str, filt: str, **kwargs) -> List[Union[str, dict]]:
     return ret
 
 
-def delete(kind: str, delete_list: List[str] = None, **kwargs):
-    force = kwargs.get('force', False)
+def delete(kind: str, delete_list: Optional[List[str]] = None, **kwargs: Any):
+    force = kwargs.get("force", False)
     if delete_list is None:
-        delete_list = get(kind, 'name', **kwargs)
+        delete_list = get(kind, "name", **kwargs)
     if delete_list:
         cmd = ["kubectl", "delete", kind] + delete_list
         if force:
@@ -82,9 +87,16 @@ def delete(kind: str, delete_list: List[str] = None, **kwargs):
         run_process(cmd, **kwargs)
 
 
+def logs(name: str, **kwargs: Any) -> List[str]:
+    cmd = ["kubectl", "logs", name]
+    out, err = run_process(cmd, **kwargs)
+    assert not err, err
+    return [s for s in out.split("\n") if s.strip()]
+
+
 def get_kind_by_status(kind: str, **kwargs) -> dict:
     ret = {}
-    for p in get(kind, 'describe', **kwargs):
+    for p in get(kind, "describe", **kwargs):
         try:
             ret[p["STATUS"]].append(p)
         except KeyError:
@@ -93,7 +105,7 @@ def get_kind_by_status(kind: str, **kwargs) -> dict:
 
 
 def deployment_from_pod_name(pod_name: str) -> str:
-    return pod_name.split('-')[0]
+    return pod_name.split("-")[0]
 
 
 if __name__ == "__main__":
